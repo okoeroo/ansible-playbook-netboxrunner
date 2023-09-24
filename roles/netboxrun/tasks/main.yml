@@ -1,0 +1,6 @@
+---
+- name: "Run {{ netbox_tools_3_src_dir }}/netbox-2-dnsmasq-dhcp.py --config {{ netbox_tools_3_etc_dir }}/netbox.config"
+  ansible.builtin.command: "{{ netbox_tools_3_src_dir }}/netbox-2-dnsmasq-dhcp.py --config {{ netbox_tools_3_etc_dir }}/netbox.config"
+
+- name: "Run {{ netbox_tools_3_src_dir }}/netbox-2-powerdns-rec.py --config {{ netbox_tools_3_etc_dir }}/netbox.config"
+  ansible.builtin.command: "{{ netbox_tools_3_src_dir }}/netbox-2-powerdns-rec.py --config {{ netbox_tools_3_etc_dir }}/netbox.config"
