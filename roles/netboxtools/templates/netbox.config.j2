@@ -1,0 +1,26 @@
+[generic]
+verbose = {{ verbose }}
+netbox_base_url = {{ netbox_base_url }}
+authkey = {{ authkey }}
+
+[dnsmasq_dhcp]
+output_file = {{ output_file }}
+lease_file = {{ lease_file }}
+authoritive = {{ authoritive }}
+
+default_lease_time_range = 600m
+default_lease_time_host = 90m
+host_range_offset_min = 129
+host_range_offset_max = 190
+
+default_domain = {{ default_domain }}
+default_ntp_server = {{ default_ntp_server }}
+
+override_dns_server = {{ override_dns_server }}
+
+
+[powerdns_rec]
+zonefile = {{ zonefile }}
+zonefile_in_addr = {{ zonefile_in_addr }}
+domain = {{ domain }}
+zonefile_footer = {{ zonefile_footer }}

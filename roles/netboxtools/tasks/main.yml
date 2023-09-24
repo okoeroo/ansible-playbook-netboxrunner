@@ -1,0 +1,47 @@
+---
+- name: Install packages for APT
+  ansible.builtin.apt:
+    name: "{{ tool_pkgs_apt }}"
+  when:
+    - ansible_pkg_mgr == "apt"
+
+- name: Install packages for APK
+  ansible.builtin.apk:
+    name: "{{ tool_pkgs_apk }}"
+  when:
+    - ansible_pkg_mgr == "apk"
+
+- name: Create script sources directory
+  ansible.builtin.file:
+    path: "{{ netbox_tools_3_src_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Create config directory
+  ansible.builtin.file:
+    path: "{{ netbox_tools_3_etc_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Create data output directory
+  ansible.builtin.file:
+    path: "{{ netbox_tools_3_out_dir }}"
+    state: directory
+    mode: '0755'
+
+- name: Git checkout Netbox-tools-3
+  ansible.builtin.git:
+    repo: "{{ git_repo_netbox_tools_3 }}"
+    dest: "{{ netbox_tools_3_src_dir }}"
+    version: main
+
+- name: Copy zonefile footer
+  ansible.builtin.copy:
+    src: zonefile.footer
+    dest: "{{ netbox_tools_3_etc_dir }}/zonefile.footer"
+    mode: '0644'
+
+- name: Config file template
+  template:
+    src: netbox.config.j2
+    dest: "{{ netbox_tools_3_etc_dir }}/netbox.config"

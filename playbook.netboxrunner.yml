@@ -1,0 +1,12 @@
+---
+- name: Netbox runner
+  hosts: netboxrunners
+  become: yes
+
+  pre_tasks:
+    - name: include secrets
+      ansible.builtin.include_vars:
+        file: secrets.yml
+
+  roles:
+    - netboxtools

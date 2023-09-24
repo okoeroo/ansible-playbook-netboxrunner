@@ -1,0 +1,38 @@
+; Footer
+
+router              CNAME   kpnpibox.koeroo.lan.
+ns                  CNAME   router.koeroo.lan.
+deadpool            CNAME   deadpool_lan1.koeroo.lan.
+;                   CNAME   deadpool_lan2.koeroo.lan.
+samba               CNAME   deadpool.koeroo.lan.
+
+qr                  CNAME   apps.koeroo.lan.
+tlsa                CNAME   apps.koeroo.lan.
+
+; dht11             CNAME   revproxy.koeroo.lan.
+dht11               A       192.168.203.42
+
+experiabox_v10      A       192.168.2.254
+
+guesthost           A       192.168.200.2
+vpn                 A       192.168.202.10
+iothost             A       192.168.204.99
+
+cloud               CNAME   revproxy.koeroo.lan.
+
+oscar               CNAME   revproxy.koeroo.lan.
+www                 CNAME   revproxy.koeroo.lan.
+
+api                 CNAME   revproxy.koeroo.lan.
+
+portainer           CNAME   seaport.koeroo.lan.
+netbox              CNAME   seaport.koeroo.lan.
+
+syslog              CNAME   spacestation.koeroo.lan.
+graylog             CNAME   spacestation.koeroo.lan.
+
+tas_switch_1        A       192.168.204.101
+tas_switch_2        A       192.168.204.102
+tas_switch_3        A       192.168.204.103
+tas_switch_4        A       192.168.204.104
+
