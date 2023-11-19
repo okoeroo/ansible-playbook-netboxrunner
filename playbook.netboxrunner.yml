@@ -2,6 +2,10 @@
 - name: Netbox runner
   hosts: netboxrunners
   become: yes
+  vars:
+    netbox_tools_3_src_dir: /usr/local/netbox-tools-3
+    netbox_tools_3_etc_dir: /etc/netbox-tools-3
+    netbox_tools_3_out_dir: /data/netbox-tools-3
 
   pre_tasks:
     - name: include secrets
