@@ -9,6 +9,6 @@
         file: secrets.yml
 
   roles:
+    - netboxtools
+    - netboxrun
     - fetch-netbox-files
-      #- netboxtools
-      #- netboxrun
