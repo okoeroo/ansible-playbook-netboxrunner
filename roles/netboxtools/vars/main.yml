@@ -1,0 +1,41 @@
+---
+tool_pkgs_apt:
+  - git
+  - python3-requests
+
+tool_pkgs_apk:
+  - git
+  - py3-requests
+
+git_repo_netbox_tools_3: https://github.com/okoeroo/netbox-tools-3.git
+
+
+# Generic
+verbose: "true"
+
+  # netbox_base_url: 
+  # authkey:
+
+
+# DNSMasq DHCP
+output_file: "{{ netbox_tools_3_out_dir }}/new_dnsmasq_dhcp.conf"
+lease_file: "/var/cache/dnsmasq/dnsmasq-dhcp.leasefile"
+authoritive: "true"
+
+default_lease_time_range: 600m
+default_lease_time_host: 90m
+host_range_offset_min: 129
+host_range_offset_max: 190
+
+default_domain: koeroo.lan
+default_ntp_server: 192.168.1.2
+
+override_dns_server: 192.168.1.2
+
+
+# PowerDNS rec
+zonefile: "{{ netbox_tools_3_out_dir }}/new_powerdns_zonefile"
+zonefile_in_addr: "{{ netbox_tools_3_out_dir }}/new_powerdns_zonefile_in_addr"
+domain: "koeroo.lan"
+zonefile_footer: "{{ netbox_tools_3_etc_dir }}/zonefile.footer"
+
