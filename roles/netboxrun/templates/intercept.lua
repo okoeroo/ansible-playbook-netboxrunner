@@ -11,6 +11,7 @@ local target_revproxy_koeroo_lan = {
                 "www.celebritiesspotted.com.",
                 "kuma.koeroo.net.",
                 "mattermost.koeroo.net.",
+                "unifi.koeroo.net.",
                 "netbox.koeroo.net."
               }
 
