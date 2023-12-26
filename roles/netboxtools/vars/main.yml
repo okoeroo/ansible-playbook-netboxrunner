@@ -2,10 +2,12 @@
 tool_pkgs_apt:
   - git
   - python3-requests
+  - python3-dnspython
 
 tool_pkgs_apk:
   - git
   - py3-requests
+  - py3-dnspython
 
 git_repo_netbox_tools_3: https://github.com/okoeroo/netbox-tools-3.git
 

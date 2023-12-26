@@ -33,7 +33,7 @@
   ansible.builtin.git:
     repo: "{{ git_repo_netbox_tools_3 }}"
     dest: "{{ netbox_tools_3_src_dir }}"
-    version: main
+    version: "{{ netbox_tools_3_version }}"
 
 - name: Copy zonefile footer
   ansible.builtin.copy:

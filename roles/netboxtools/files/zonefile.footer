@@ -19,11 +19,10 @@ vpn                 A       192.168.202.10
 iothost             A       192.168.204.99
 
 cloud               CNAME   revproxy.koeroo.lan.
-
 oscar               CNAME   revproxy.koeroo.lan.
 www                 CNAME   revproxy.koeroo.lan.
-
 api                 CNAME   revproxy.koeroo.lan.
+preseed             CNAME   revproxy.koeroo.lan.
 
 portainer           CNAME   seaport.koeroo.lan.
 netbox              CNAME   seaport.koeroo.lan.
