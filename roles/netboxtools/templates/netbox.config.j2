@@ -3,6 +3,14 @@ verbose = {{ verbose }}
 netbox_base_url = {{ netbox_base_url }}
 authkey = {{ authkey }}
 
+
+[powerdns_rec]
+zonefile = {{ zonefile }}
+zonefile_in_addr = {{ zonefile_in_addr }}
+domain = {{ domain }}
+zonefile_footer = {{ zonefile_footer }}
+
+
 [dnsmasq_dhcp]
 output_file = {{ output_file }}
 lease_file = {{ lease_file }}
@@ -16,11 +24,42 @@ host_range_offset_max = 190
 default_domain = {{ default_domain }}
 default_ntp_server = {{ default_ntp_server }}
 
-override_dns_server = {{ override_dns_server }}
+# override_dns_server = {{ override_dns_server }}
+
+boot_filename = {{ boot_filename }}
+boot_servername = {{ boot_servername }}
+boot_address = {{ boot_address }}
 
 
-[powerdns_rec]
-zonefile = {{ zonefile }}
-zonefile_in_addr = {{ zonefile_in_addr }}
-domain = {{ domain }}
-zonefile_footer = {{ zonefile_footer }}
+
+[prefix:192.168.1.0/24]
+gateway = 192.168.1.1
+dns = 192.168.1.2
+ntp = 192.168.1.2
+
+[prefix:192.168.200.0/24]
+gateway = 192.168.200.1
+dns = 192.168.200.2
+ntp = 192.168.200.2
+
+[prefix:192.168.201.0/24]
+gateway = 192.168.201.1
+dns = 192.168.201.2
+ntp = 192.168.201.2
+
+[prefix:192.168.202.0/24]
+gateway = 192.168.202.1
+dns = 192.168.202.2
+ntp = 192.168.202.2
+
+[prefix:192.168.203.0/24]
+gateway = 192.168.203.1
+dns = 192.168.203.2
+ntp = 192.168.203.2
+
+[prefix:192.168.204.0/24]
+gateway = 192.168.204.1
+dns = 192.168.204.2
+ntp = 192.168.204.2
+
+

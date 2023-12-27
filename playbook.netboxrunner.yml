@@ -7,7 +7,8 @@
     netbox_tools_3_etc_dir: /etc/netbox-tools-3
     netbox_tools_3_out_dir: /data/netbox-tools-3
       # netbox_tools_3_version: main
-    netbox_tools_3_version: "0.52"
+    netbox_tools_3_version: "0.53"
+
 
   pre_tasks:
     - name: include secrets

@@ -34,6 +34,10 @@ default_ntp_server: 192.168.1.2
 
 override_dns_server: 192.168.1.2
 
+boot_filename: netboot.xyz.kpxe
+boot_servername: netboot.xyz
+boot_address: 192.168.203.47
+
 
 # PowerDNS rec
 zonefile: "{{ netbox_tools_3_out_dir }}/new_powerdns_zonefile"
