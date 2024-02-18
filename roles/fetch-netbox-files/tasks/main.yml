@@ -2,18 +2,18 @@
 - name: Grab netbox files - dnsmasq dhcp.conf
   ansible.builtin.fetch:
     src: /data/netbox-tools-3/new_dnsmasq_dhcp.conf
-    dest: /home/ansible/configurations/dnsmasq_dhcp/dhcp.conf
+    dest: "{{ home_config_dir }}/dnsmasq_dhcp/dhcp.conf"
     flat: yes
 
 - name: Grab netbox files - PowerDNS recursor zonefile
   ansible.builtin.fetch:
     src: /data/netbox-tools-3/new_powerdns_zonefile
-    dest: /home/ansible/configurations/powerdns-recursor/koeroo.lan
+    dest: "{{ home_config_dir }}/powerdns-recursor/koeroo.lan"
     flat: yes
 
 - name: Grab netbox files - PowerDNS recursor reverse zonefile
   ansible.builtin.fetch:
     src: /data/netbox-tools-3/new_powerdns_zonefile_in_addr
-    dest: /home/ansible/configurations/powerdns-recursor/168.192.in-addr.arpa.lan
+    dest: "{{ home_config_dir }}/powerdns-recursor/168.192.in-addr.arpa.lan"
     flat: yes
 

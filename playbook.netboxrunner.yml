@@ -8,6 +8,7 @@
     netbox_tools_3_out_dir: /data/netbox-tools-3
       # netbox_tools_3_version: main
     netbox_tools_3_version: "0.53"
+    home_config_dir: /home/okoeroo/configurations
 
 
   pre_tasks:

@@ -1,5 +1,7 @@
 ; Footer
 
+ansible             CNAME   ansible_debian.koeroo.lan.
+
 router              CNAME   kpnpibox.koeroo.lan.
 ns                  CNAME   router.koeroo.lan.
 deadpool            CNAME   deadpool_lan1.koeroo.lan.
