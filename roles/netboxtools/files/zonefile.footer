@@ -5,7 +5,6 @@ ansible             CNAME   ansible_debian.koeroo.lan.
 router              CNAME   kpnpibox.koeroo.lan.
 ns                  CNAME   router.koeroo.lan.
 deadpool            CNAME   deadpool_lan1.koeroo.lan.
-;                   CNAME   deadpool_lan2.koeroo.lan.
 samba               CNAME   deadpool.koeroo.lan.
 
 qr                  CNAME   apps.koeroo.lan.
