@@ -37,7 +37,7 @@
 
 - name: Copy zonefile footer
   ansible.builtin.copy:
-    src: zonefile.footer
+    src: "{{ home_config_dir }}/netbox-tools-3-config/zonefile.footer"
     dest: "{{ netbox_tools_3_etc_dir }}/zonefile.footer"
     mode: '0644'
 
