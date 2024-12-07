@@ -12,6 +12,8 @@ local target_revproxy_koeroo_lan = {
                 "kuma.koeroo.net.",
                 "mattermost.koeroo.net.",
                 "unifi.koeroo.net.",
+                "gitlab.koeroo.net.",
+                "huiskat.koeroo.net.",
                 "netbox.koeroo.net."
               }
 
